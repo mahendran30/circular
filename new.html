@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="new.css" type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+        <script src="https://kit.fontawesome.com/7414e22221.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+        <link rel = "icon" href = "./images/Brandee_1_transparent.png" type = "image/x-icon">
+        <link rel="stylesheet" type="text/css" href="nav.css">
+        <!-- connect css file with html useing link tag -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        
+        <title>Brand </title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.lettering.js"></script>
+        <script type="text/javascript" src="circletype.min.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+    </head>
+    <body>  
+        
+          <div class = "circle-container" style = "display:block;">
+            <ul class="circle-item">
+                 <li><img src="./circleimages/dollar_symbol.png"></li>
+                 <li><img src="./circleimages/chart.png"></li>
+                 <li><img src="./circleimages/clock.png"></li>
+                 <li><img src="./circleimages/contact_book.png"></li>
+                 <li><img src="./circleimages/FIle.png"></li>
+                 <li><img src="./circleimages/voice.png"></li>
+                 <li><img src="./circleimages/dollar_currency.png"></li>
+                 <li><img src="./circleimages/Brandee_1_transparent.png"></li>
+                </ul>
+               </div> 
+               <div class = "container" style="display:none">
+                <div class = "item">
+                 <img src = "4.png" class = "deg3" >
+                 <!--img src = "2.png" class = "deg2" >
+                 <img src = "3.png" class = "deg3" >
+                 <img src = "4.png" class = "deg5" -->
+                </div>
+                </div>
+
+          <script>
+              $(function() {
+
+                    var deg = 0;
+                    var rotate = 1;
+                    var club_rotate = setInterval(club_rotate, 25);
+                    $('.circle-item > li').not(".circle-item > *:nth-of-type(8)").mouseenter(function() {
+                        rotate = 0
+                    });
+                    $('.circle-item > li').not(".circle-item > *:nth-of-type(8)").mouseleave(function() {
+                        rotate = 1
+                    });
+                    function club_rotate() {
+                        if (rotate == 0) {
+                            return
+                        }
+                        deg = get_deg(deg + 1);
+                        var deg0 = deg;
+                        var $data = $('.circle-item').children().not(".circle-item > *:nth-of-type(8)");
+                        var length = 13;
+                        if ($(window).width() <= 540) { // inorder to make it responsive, decreases size to 7em if window size is less than 570
+                            length = 7
+                        }
+                        $data.each(function() {
+                            $(this).css("-webkit-transform", "rotate(" + deg0 + "deg) translate(" + length + "em) rotate(-" + deg0 + "deg)").css("transform", "rotate(" + deg0 + "deg) translate(" + length + "em) rotate(-" + deg0 + "deg)");
+                            deg0 = get_deg(deg0 + 51)
+                        })
+                    }
+
+                    function get_deg(deg0) {
+                        if (deg0 > 360)
+                            return (deg0 - 360);
+                        else return deg0
+                    }
+                });
+
+          </script>
+          
+          <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+     
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="text">
+            <img  src="profile3.jpeg" height="60" width="60"> 
+            <img  src="profile3.jpeg" height="60" width="60"> 
+            <img  src="profile3.jpeg" height="60" width="60"> 
+            <img  src="profile3.jpeg" height="60" width="60">  
+            <img  src="profile3.jpeg" height="60" width="60">  
+            <img  src="profile3.jpeg" height="60" width="60">  
+        
+
+       
+        <script>
+            new CircleType(document.getElementById('text'));
+        </script> -->
+        
+        <!--  
+        <script type="text/javascript" src="circletype.min.js">
+            $('#text').CircleType({position: 'absolute'});
+        </script> -->
+        <!-- <script>
+             var tmpAnimation = 0;
+  $("button").click(function(){
+    var element = $("img");
+    tmpAnimation = tmpAnimation + 90;
+    
+    $({degrees: tmpAnimation - 90}).animate({degrees: tmpAnimation}, {
+        duration: 2000,
+        step: function(now) {
+            element.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
+  });
+        </script> -->
+<!-- 
+        <div class="container">
+            <div class="circle">
+
+      
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_object" src='profile3.jpeg'>
+            <img class="sc_center" src='profile3.jpeg'>
+            </div>
+            </div>  
+        
+
+          <script src="smartCycle.min.js"></script>
+
+          <script>
+              $(".circle").smartCycle({
+
+                 });
+
+          </script> -->
